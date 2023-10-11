@@ -1,0 +1,13 @@
+@keyframes modalShow {
+    0% {transform: translateX(-128%);}
+    80% {transform: translateX(9%);}
+    100% {transform: translateX(0%);}
+}
+
+@keyframes iconsJump {
+    0% {transform: translateY(0%);}
+    25% {transform: translateY(-15%);}
+    50% {transform: translateY(0%);}
+    75% {transform: translateY(-15%);}
+    100% {transform: translateY(0%);}
+}

@@ -1,0 +1,80 @@
+dialog {
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width: 50vw;
+    border-radius: 40px;
+    background: #eee;
+    animation: modalShow 2s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+form label {
+    font-size: 26px;
+}
+
+form input {
+    padding: 0.8rem;
+    border-radius: 15px;
+}
+/* play the icon jump animation when the form is invalid */
+form:invalid .icon-container .material-symbols-outlined {
+    animation-play-state: running;
+    color: red;
+}
+
+/* Pause the icon jump animation when the form is invalid */
+form:valid .icon-container .material-symbols-outlined {
+    animation-play-state: paused;
+    color: green;
+}
+
+form input:invalid  {
+    outline: red 1px solid;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    padding-top: 1rem;
+    font-size: 18px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 0.8rem;
+    border-radius: 15px;
+    flex: 1;
+}
+
+/* Styling the icons */
+form .icon-container .material-symbols-outlined {
+    margin-left: -40px;
+    font-size: 30px;
+    animation: iconsJump 1.2s infinite forwards;
+    animation-delay: 3s;
+}
+
+form .icon-container .material-symbols-outlined:hover {
+    font-size: 35px;
+}
+
+form .material-symbols-outlined { /* When invalid the icons need to be red */
+    /* color: red; */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+form textarea {
+    border-radius: 15px;
+    resize: none;
+}
